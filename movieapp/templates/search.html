@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search</title>
+</head>
+<body>
+    <h1>Search Function Implementation Page</h1>
+
+    {% for o in obj %}
+
+    <a href="{% url 'detail' o.id %}"> Detail about this movie</a><br/>
+    {{o.original_title}}<br/>
+    <img src="https://image.tmdb.org/t/p/w500{{o.poster_path}}"><br/>
+    <img src="https://image.tmdb.org/t/p/w500{{o.backdrop_path}}"><br/>
+    {{o.vote_average}}<br/>
+    {{o.overview}}<br/>
+    {{o.title}}<br/>
+    {{o.id}}<br/>
+    <br/><br/><br/>
+
+    {% endfor %}
+
+</body>
+</html>
